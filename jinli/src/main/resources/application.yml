@@ -1,0 +1,25 @@
+server:
+  port: 8088
+  servlet:
+    path: "/"
+
+Logging:
+  level:
+    com.joe.jinli: debug
+#      org.springframework: debug
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3307/jinli
+    username: root
+    password: Ywj15267719701
+
+mybatis:
+#  configuration:
+#    map-underscore-to-camel-case: true
+  type-aliases-package: com.hziee.jinli.pojo
+#  mapper-locations: mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
